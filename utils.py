@@ -300,3 +300,13 @@ class Function:
         np_mean = x.groupby(group_field).apply(_sub_cummean)
         np_mean.name = 'np_mean'
         return np_mean.dropna()
+    
+    @staticmethod
+    def _get_factor(df, col):
+        factor = df[['code', 'trade_date', col]]
+        factor = factor.pivot_table(index='trade_date', columns='code', values=col)
+
+        return factor
+
+
+
