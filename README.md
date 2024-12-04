@@ -37,9 +37,57 @@
   - Quarterly share turnover 季换手率 T=3
   - Annual share turnover 年换手率 T=12
   - Annualized traded value ratio 年化交易量比率. 对日换手率进行加权求和,时间窗口为252个交易日,半衰期为63个交易日
+- ### Momentum
 
 
+  - Short Term reversal短期反转.最近一个月的加权累计对数日收益率
+  - Seasonality 季节因子.过去5年的已实现次月收益率的平均值
+  - Industry Momentum 行业动量.该指标描述个股相对中信一级行业的强度
+  - Relative strength 相对于市场强度
+  - Historical alpha 在BETA计算所进行的时间序列回归中取回归截距项
+- ### Quality
 
+
+  - Leverage
+
+    - Market Leverage(3) 市场杠杆
+    - Book Leverage(3) 账面杠杆
+    - Debt to asset ratio(3) 资产负债比
+  - Earning Variability
+
+    - Variation in Sales(3) 营业收入波动率
+    - Variation in Earning(3) 盈利波动率
+    - Variation in cashflows(3) 现金流波动率
+    - Standard deviation of analyst Earnings-to-Price(3) 分析师预测盈市率标准差
+  - Earnings Quality
+
+    - Accruals Balancesheet version(3) 资产负债表应计项目
+    - Accruals Cashflow version(3) 现金流量表应计项目
+  - 盈利能力Profitability
+
+    - 资产周转率Asset turnover
+    - 资产毛利率Gross profitability
+    - 销售毛利率Gross Profit Margin
+    - 总资产收益率 Return on assets
+  - Investment Quality
+
+    - 总资产增长率Total Assets Growth Rate：最近5个财政年度的总资产对时间的回归的斜率值，除以平均总资产，最后取相反数
+    - 股票发行量增长率Issuance growth：最近5个财政年度的流通股本对时间的回归的斜率值，除以平均流通股本，最后取相反数
+    - 资本支出增长率Capital expenditure growth：将过去5个财政年度的资本支出对时间的回归的斜率值，除以平均资本支出，最后取相反数
+
+    PS:资本支出是指用于购买各种长期资产(长期投资固定资产无形资产和其他长期资产)的支出然后再减去无息长期负债(各种不需支付利息的长期应付款专项应付款等)的增加额。
+- ### Value
+
+
+  - 账面市值比（Book to price）：将最近报告期的普通股账面价值除以当前市值
+  - Earnings-to-price Ratio：过去12个月的盈利除以当前市值
+  - 分析师预测EP比：预测12个月的盈利除以当前市值
+  - Cash earnings to price：过去12个月的现金盈利除以当前市值
+  - Enterprise multiple：上一财政年度的息税前利润（EBIT）除以当前企业价值（EV）
+  - 长期相对强度
+  - 长期历史Alpha
+
+  PS:长期指标均采用750为回望窗口大小。
 
 ## utils
 
