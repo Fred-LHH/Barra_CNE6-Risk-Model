@@ -24,28 +24,3 @@ class Dividend(Function):
         DTOP = dividend[['code', 'trade_date', 'DTOP']]
 
         return DTOP
-
-
-
-
-
-
-
-def cal_DTOP(dividend,
-              price):
-    dividend = dividend[dividend['div_proc'] == '实施']
-    dividend = dividend[['code', 'end_date', 'ann_date', 'cash_div_tax']]
-    dividend.reset_index(drop=True, inplace=True)
-    ttm_dividend = ut._convert_ttm(dividend, cols=['cash_div_tax'])
-
-    close = ut.get_price_last_month_end(price)
-    ttm_dividend = ut._pubDate_align_tradedate(ttm_dividend, 'ann_date', '20240831')
-    dividend = pd.merge(ttm_dividend, close, on=['code', 'trade_date'], how='left')
-    dividend['DTOP'] = dividend.eval('cash_div_tax_TTM / last_month_end_close')
-    DTOP = dividend[['code', 'trade_date', 'DTOP']]
-
-    return DTOP
-
-
-
-
