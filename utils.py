@@ -4,7 +4,7 @@ import time
 from functools import wraps
 from joblib import Parallel, delayed
 import tushare as ts
-ts.set_token('dfb6e9f4f9a3db86c59a3a0f680a9bdc46ed1b5adbf1e354c7faa761')
+ts.set_token('your token')
 pro = ts.pro_api()
 import talib as ta
 
