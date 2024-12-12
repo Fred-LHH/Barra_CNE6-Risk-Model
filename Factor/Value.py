@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-import utils as Function
+import RiskModel.Factor.utils as Function
 from tqdm import tqdm
 from joblib import Parallel, delayed
 
